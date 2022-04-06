@@ -1,21 +1,5 @@
 CREATE DATABASE project_1
 
--- Table: public.user_access
-
--- DROP TABLE IF EXISTS public.user_access;
-
-CREATE TABLE IF NOT EXISTS public.user_access
-(
-    acc_id integer NOT NULL DEFAULT nextval('user_access_acc_id_seq'::regclass),
-    acc_type character varying(30) COLLATE pg_catalog."default" NOT NULL,
-    CONSTRAINT user_access_pkey PRIMARY KEY (acc_id)
-)
-
-TABLESPACE pg_default;
-
-ALTER TABLE IF EXISTS public.user_access
-    OWNER to postgres;
-
 -- Table: public.employees
 
 -- DROP TABLE IF EXISTS public.employees;
@@ -27,14 +11,8 @@ CREATE TABLE IF NOT EXISTS public.employees
     last_name character varying(20) COLLATE pg_catalog."default" NOT NULL,
     email character varying(20) COLLATE pg_catalog."default" NOT NULL,
     password character varying(20) COLLATE pg_catalog."default" NOT NULL,
-    access_id integer NOT NULL DEFAULT nextval('employees_access_id_seq'::regclass),
     CONSTRAINT employees_pkey PRIMARY KEY (id),
-    CONSTRAINT employees_email_key UNIQUE (email),
-    CONSTRAINT access_id_fk FOREIGN KEY (access_id)
-        REFERENCES public.user_access (acc_id) MATCH SIMPLE
-        ON UPDATE NO ACTION
-        ON DELETE NO ACTION
-        NOT VALID
+    CONSTRAINT employees_email_key UNIQUE (email)
 )
 
 TABLESPACE pg_default;
