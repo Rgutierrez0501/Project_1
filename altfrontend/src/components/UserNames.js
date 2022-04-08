@@ -17,6 +17,8 @@ export default class PersonList extends React.Component {
 
   render() {
     return (
+      <div>
+      <h2>Employees</h2>
       <ul>
         {
           this.state.persons
@@ -25,6 +27,7 @@ export default class PersonList extends React.Component {
             )
         }
       </ul>
+      </div>
     )
   }
 }
