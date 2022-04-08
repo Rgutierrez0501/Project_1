@@ -1,3 +1,4 @@
+//sets up information to connect to Postgresql
 const Pool = require('pg').Pool;
 const pool = new Pool({
     user:'postgres',

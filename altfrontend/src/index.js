@@ -8,7 +8,7 @@ const clientId = process.env.REACT_APP_AUTH0_CLIENT_ID;
 const audience = process.env.REACT_APP_AUTH0_AUDIENCE;
 
 ReactDOM.render(
-  <Auth0Provider
+  <Auth0Provider //Passes Auth0 data as props to the App so they have access to application information
     domain={domain}
     clientId={clientId}
     redirectUri={window.location.origin}
