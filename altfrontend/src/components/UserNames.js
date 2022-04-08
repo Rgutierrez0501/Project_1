@@ -6,6 +6,7 @@ export default class PersonList extends React.Component {
     persons: []
   }
 
+  //Makes call to unprotected API, doesn't require authentication to get data
   componentDidMount() {
     axios.get(`http://localhost:3001/users`)
       .then(res => {

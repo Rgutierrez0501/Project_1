@@ -2,11 +2,13 @@ import React, { useEffect, useState } from 'react';
 import { useAuth0 } from '@auth0/auth0-react';
 
 
-
+//Component to make a call to protected API to get emails
 const Emails = () => {
-  const { getAccessTokenSilently } = useAuth0();
+  const { getAccessTokenSilently } = useAuth0();  //hook for Auth0 to get token
   const [emails, setEmails] = useState(null);
+  const { user, isAuthenticated } = useAuth0();
 
+  
   useEffect(() => {
     (async () => {
       try {
@@ -31,16 +33,20 @@ const Emails = () => {
 
 
   if (!emails) {
+    if(!isAuthenticated){
+      return <div>Login to view emails</div>
+    }
     return <div>Loading...</div>;
   }
-
+  
   return (
+    isAuthenticated && (
     <ul>
       {emails.map((email) => {
         return <li key={email.id}>{email.email}</li>;
       })}
     </ul>
-    
+    )
   );
 };
 

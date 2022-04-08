@@ -42,7 +42,7 @@ app.get('/users',(req,res)=>{
 });
 
 
-
+//sets up API with Auth0 information to create protected links
 const jwtCheck = jwt({
   secret: jwks.expressJwtSecret({
       cache: true,
@@ -55,6 +55,7 @@ issuer: 'https://dev-oyuwqj0t.us.auth0.com/',
 algorithms: ['RS256']
 });
 
+//All HTTP methods require authorization token beyond this point
 app.use(jwtCheck);
 
 
