@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useAuth0 } from '@auth0/auth0-react';
-import axios from 'axios';
+
 
 
 const Emails = () => {
@@ -12,9 +12,12 @@ const Emails = () => {
       try {
         const token = await getAccessTokenSilently({
           audience: 'https://p1-api',
-          scope: 'read:emails',
+         
         });
-        const response = await fetch('https://p1-api/emails', {
+
+       
+
+        const response = await fetch('http://localhost:3001/emails', {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -26,11 +29,6 @@ const Emails = () => {
     })();
   }, [getAccessTokenSilently]);
 
-  axios.get(`http://localhost:3001/emails`,getAccessTokenSilently())
-  .then(res => {
-    const emails = res.data;
-    setEmails({ emails });
-  })
 
   if (!emails) {
     return <div>Loading...</div>;
@@ -38,10 +36,11 @@ const Emails = () => {
 
   return (
     <ul>
-      {emails.map((email, index) => {
-        return <li key={index}>{email}</li>;
+      {emails.map((email) => {
+        return <li key={email.id}>{email.email}</li>;
       })}
     </ul>
+    
   );
 };
 
