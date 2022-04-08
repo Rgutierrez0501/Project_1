@@ -1,1 +1,0 @@
-CREATE TABLE employees(ID serial PRIMARY KEY, First_Name VARCHAR(20) NOT NULL, Last_Name VARCHAR(20) NOT NULL, Email VARCHAR(20) UNIQUE NOT NULL, CHECK (Email like '%@%'), Password VARCHAR(20) NOT NULL, CHECK (password like '%[0-9]%' and password like '%[A-Z]%' and password like '%[!@#$%a^&*()-_+=.,;:"`~]%' and length(password) >= 8), Access_ID serial);
