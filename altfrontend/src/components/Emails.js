@@ -34,18 +34,21 @@ const Emails = () => {
 
   if (!emails) {
     if(!isAuthenticated){
-      return <div>Login to view emails</div>
+      return <h3>Login to view emails</h3>
     }
     return <div>Loading...</div>;
   }
   
   return (
     isAuthenticated && (
+      <div>
+      <h2>Emails</h2>
     <ul>
       {emails.map((email) => {
         return <li key={email.id}>{email.email}</li>;
       })}
     </ul>
+    </div>
     )
   );
 };
