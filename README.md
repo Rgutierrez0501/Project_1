@@ -12,20 +12,20 @@ The code was unit tested using Jest.
 Tech Stack: Javascript, Node.js, Express, PostgreSQL, React, CSS, HTML, Jest, Git
 
 To get started:
-Create a database following the instructions in the database textfile
-Add the employee data to your database
-In your IDE run 'nmp install' in the terminal for both the altFrontend and altBackend folders
-In the dbconnections.js file change the password to your database's password
-In the altBackend folder run 'npm index.js' in the terminal to start the server
-In the altFrontend folder run 'npm start' to start the React app in your web browser
-On the React app page press the login button and create an account or login with a google account
-Have fun using the application
+Create a database following the instructions in the database textfile.
+Add the employee data to your database.
+In your IDE run 'nmp install' in the terminal for both the altFrontend and altBackend folders.
+In the dbconnections.js file change the password to your database's password.
+In the altBackend folder run 'npm index.js' in the terminal to start the server.
+In the altFrontend folder run 'npm start' to start the React app in your web browser.
+On the React app page press the login button and create an account or login with a google account.
+Have fun using the application.
 
 Usage of the project is for displaying employee names and emails for authorized users for a company in any easy to use, accessible app
 
 Contributors:
-Matthew Kott
-Rosalinda Gutierrez
-Kalvin McClure
+Matthew Kott,
+Rosalinda Gutierrez,
+Kalvin McClure,
 Graham (add last name)
  
