@@ -1,12 +1,8 @@
 CREATE DATABASE project_1
 
--- Table: public.employees
-
--- DROP TABLE IF EXISTS public.employees;
-
 CREATE TABLE IF NOT EXISTS public.employees
 (
-    id integer NOT NULL DEFAULT nextval('employees_id_seq'::regclass),
+    id integer NOT NULL,
     first_name character varying(20) COLLATE pg_catalog."default" NOT NULL,
     last_name character varying(20) COLLATE pg_catalog."default" NOT NULL,
     email character varying(20) COLLATE pg_catalog."default" NOT NULL,
@@ -15,7 +11,3 @@ CREATE TABLE IF NOT EXISTS public.employees
     CONSTRAINT employees_email_key UNIQUE (email)
 )
 
-TABLESPACE pg_default;
-
-ALTER TABLE IF EXISTS public.employees
-    OWNER to postgres;
