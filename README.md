@@ -27,5 +27,5 @@ Contributors:
 Matthew Kott,
 Rosalinda Gutierrez,
 Kalvin McClure,
-Graham (add last name)
+Graham Latham
  
