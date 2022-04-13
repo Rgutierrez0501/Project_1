@@ -22,7 +22,7 @@ img {
 
 .styleBox {
   width: auto;
-  height: 300px;
+  height: auto;
   background: rgb(201, 201, 226);
   border-radius: 0% 0% 0% 0% / 0% 0% 0% 0% ;
   color: #353b43;
