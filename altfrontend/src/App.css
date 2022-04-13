@@ -1,22 +1,95 @@
 * {
-  margin: 0;
-  padding: 0;
+  margin: 1;
   box-sizing: border-box;
 }
 
-body {
-  padding: 2rem;
-}
 
 button {
-  margin: 2rem 0;
+  margin: 0 auto;
+  display: block;
   padding: 1rem 2rem;
-  width: 120px;
+  width: 200px;
   cursor: pointer;
+  background-color: #737f8a;
+  margin-top: 4em;
 }
 
 img {
   width: 80px;
-  
+  margin: 0 auto;
+  display: block;
 }
 
+.styleBox {
+  width: auto;
+  height: 300px;
+  background: rgb(201, 201, 226);
+  border-radius: 0% 0% 0% 0% / 0% 0% 0% 0% ;
+  color: #353b43;
+  box-shadow: 20px 20px rgba(0, 0, 0, 0.15);
+  transition: all .4s ease;
+  padding-left: 1em;
+  padding-right: 1em;
+  margin-left: 5em;
+  margin-right: 5em;
+  margin-top: 4em;
+}
+
+
+html {
+  background-color: #353b43;
+  color: #737f8a;
+}
+
+body {
+  background-color: #3a4a58;
+  font-family: "Anaheim", sans-serif;
+  color: #959ca3;
+  -webkit-font-smoothing: antialiased;
+  padding: 3rem;
+  margin-left: 5em;;
+  margin-right: 5em;
+  justify-content: center;
+}
+
+
+
+h1 {
+font-weight: 400;
+  font-family: "Quattrocento Sans", sans-serif;
+  color: #a9a9b9;
+  text-align: center;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 400;
+  font-family: "Quattrocento Sans", sans-serif;
+  color: #4e4e57;
+  text-align: center;
+}
+
+p {
+  font-family: "Quattrocento Sans", sans-serif;
+  text-align: center;
+  padding: 1em;
+}
+
+[scroll-behavior=smooth] {
+  scroll-behavior: smooth;
+}
+
+pre {
+  color: #afbac4;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  padding: 1em;
+}
