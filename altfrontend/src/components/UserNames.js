@@ -17,7 +17,7 @@ export default class PersonList extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className='styleBox'>
       <h2>Employees</h2>
       <ul>
         {

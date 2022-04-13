@@ -41,7 +41,7 @@ const Emails = () => {
   
   return (
     isAuthenticated && (
-      <div>
+      <div className='styleBox'>
       <h2>Emails</h2>
     <ul>
       {emails.map((email) => {

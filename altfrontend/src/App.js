@@ -17,10 +17,10 @@ function App() {
     <>
       <Title/>
       <Profile />
-      <LoginButton />
-      <LogoutButton />
       <PersonList/>
       <Emails/>
+      <LoginButton />
+      <LogoutButton />
     </>
   );
 }

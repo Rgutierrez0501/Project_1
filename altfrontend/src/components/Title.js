@@ -1,6 +1,6 @@
 function Title () {
     return (  
-        <h1>McDonald's Employee Directory</h1>
+        <h1>Company Employee Directory</h1>
     );
 }
 

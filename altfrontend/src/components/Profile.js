@@ -9,7 +9,7 @@ const Profile = () => {
 
   return (
     isAuthenticated && ( 
-     <div>
+     <div className='styleBox'>
        
         <img src={user.picture} alt={user.name} />
         <h2>Hello, {user.name}</h2>
