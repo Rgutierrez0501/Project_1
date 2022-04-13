@@ -45,7 +45,7 @@ const Emails = () => {
       <h2>Emails</h2>
     <ul>
       {emails.map((email) => {
-        return <li key={email.id}>{email.email}</li>;
+        return <li key={email.id}>{email.id}.{email.email}</li>;
       })}
     </ul>
     </div>
