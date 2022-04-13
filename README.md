@@ -6,7 +6,7 @@ Created an application which displays names of employees for a company and email
 A RESTful API was created using Javascript, Node.js, Express, and PostgreSQL. 
 Clients of the API should be able to log into the API and then provide data to authorized clients. 
 Implemented the front end client for the express server using React.
-Authentication of users was implemented using Auth0.
+Authentication of users was implemented using Auth0 with JWTs.
 The code was unit tested using Jest.
 
 Tech Stack: Javascript, Node.js, Express, PostgreSQL, React, CSS, HTML, Jest, Git
@@ -21,7 +21,7 @@ In the altFrontend folder run 'npm start' to start the React app in your web bro
 On the React app page press the login button and create an account or login with a google account.
 Have fun using the application.
 
-Usage of the project is for displaying employee names and emails for authorized users for a company in any easy to use, accessible app
+Usage of the project is for displaying employee names and emails for authorized users for a company in an easy to use, accessible app
 
 Contributors:
 Matthew Kott,
