@@ -62,13 +62,19 @@ font-weight: 400;
 }
 
 h2,
-h3,
 h4,
 h5,
 h6 {
   font-weight: 400;
   font-family: "Quattrocento Sans", sans-serif;
   color: #4e4e57;
+  text-align: center;
+}
+
+h3 {
+  font-weight: 400;
+  font-family: "Quattrocento Sans", sans-serif;
+  color: black;
   text-align: center;
 }
 
