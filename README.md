@@ -14,7 +14,7 @@ Tech Stack: Javascript, Node.js, Express, PostgreSQL, React, CSS, HTML, Jest, Gi
 To get started:
 Create a database following the instructions in the database textfile.
 Add the employee data to your database.
-In your IDE run 'nmp install' in the terminal for both the altFrontend and altBackend folders.
+In your IDE run 'npm install' in the terminal for both the altFrontend and altBackend folders.
 In the dbconnections.js file change the password to your database's password.
 In the altBackend folder run 'npm index.js' in the terminal to start the server.
 In the altFrontend folder run 'npm start' to start the React app in your web browser.
