@@ -1,5 +1,7 @@
 //Importing dependencies in video it was hardcoded functions that were mock database information
 
+const Users= require('./user');
+const axios= require('axios');
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
@@ -9,37 +11,36 @@ const poolconn = require('../dbconnection');
 const jwt = require('express-jwt');
 const jwks = require('jwks-rsa');
 const { query } = require('express');
+  
+   
+jest.mock('axios');
 
-describe('Test Handlers', () => {
-    
-    test('respond to /users', ()=>{
-        app.get('/users',(req,res)=>{ 
+    test('should fetch users', () => {
+        const users = [{id:'1', first_name: 'Bob',last_name:'Guy'}];
+        const resp = {data: users};
+        axios.get.mockResolvedValue(resp);
+        return Users().then(data => expect(data).toEqual(users));
+      });
 
-            poolconn.query('SELECT id,first_name, last_name FROM employees',(error,results)=>{//default.js page content data from db
-                if(error){
-                    throw error;
-                }
-                res.status(200).json(results.rows);
-            })
-          });
-    }
-    app.get('/users',(req,res))
-    expect(poolconn.query(res.status(200).json(results.rows)).toEqual('SELECT id,first_name, last_name FROM employees',(results)));
 
-)});
     test('respond to /emails', ()=> {
-        app.get('/emails',(req,res)=>{   //router.get('/',index);
-            
-            poolconn.query('SELECT id,email FROM employees',(error,results)=>{//default.js page content data from db
-                if(error){
-                    throw error;
-                }
-                res.status(200).json(results.rows);
-            })
-          });
-    }
-    app.get('/emails',(req,res)=>{
-        res.set('Access-Control-Allow-Origin', '*');
+        const email =[{email:'user1@yahoo.com', password: 'abc123!'}];
+        const resp ={data: email};
+        axios.get.mockResolvedValue(resp);
+        return email();
+    });
 
-    poolconn.query(res.status(200).json(results.rows)).toEqual('SELECT id,email FROM employees',(results));
-});
+            
+    //         poolconn.query('SELECT id,email FROM employees',(error,results)=>{
+    //             if(error){
+    //                 throw error;
+    //             }
+    //             res.status(200).json(results.rows);
+    //         })
+    //       });
+    //}
+    // app.get('/emails',(req,res, ()=> {
+    //     res.set('Access-Control-Allow-Origin', '*');
+
+//     poolconn.query(res.status(200).json(results.rows)).toEqual('SELECT id,email FROM employees',(results));
+// });

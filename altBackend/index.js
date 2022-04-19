@@ -1,10 +1,10 @@
 // importing the dependencies
 const express = require('express');//import {router} from 'express'//dependcies for framework
-const bodyParser = require('body-parser');
+const bodyParser = require('body-parser');//required for 3rd party db to link to your APi via express module/viewing data capabilites is the lightweight component of transfering data.  Makes sure .json format is only accepted from the client
 const cors = require('cors');
 const helmet = require('helmet');
 const morgan = require('morgan');
-const poolconn = require('./dbconnection');
+const poolconn = require('./dbconnection');//runs validility check in JSON file +connects to db
 const jwt = require('express-jwt');
 const jwks = require('jwks-rsa');
 
@@ -44,8 +44,8 @@ app.get('/users',(req,res)=>{ //router.get('/",index")
   poolconn.query('SELECT id,first_name, last_name FROM employees',(error,results)=>{//default.js page content data from db
       if(error){
           throw error;
-      }
-      res.status(200).json(results.rows);
+      }else{
+      res.status(200).json(results.rows)};
   })
 });
 

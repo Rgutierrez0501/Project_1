@@ -1,5 +1,5 @@
 //sets up API with Auth0 information to create protected links
-const jwtCheck = jwt({//caching info which makes RESTful api
+const jwtCheck = jwt({
     secret: jwks.expressJwtSecret({
         cache: true,
         rateLimit: true,
