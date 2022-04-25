@@ -4,7 +4,7 @@ const bodyParser = require('body-parser');//required for 3rd party db to link to
 const cors = require('cors');
 const helmet = require('helmet');
 const morgan = require('morgan');
-const poolconn = require('./dbconnection');//runs validility check in JSON file +connects to db
+const pool = require('./dbconnection');//runs validility check in JSON file +connects to db
 const jwt = require('express-jwt');
 const jwks = require('jwks-rsa');
 
@@ -41,7 +41,7 @@ app.listen(3001, () => {
 app.get('/users',(req,res)=>{ //router.get('/",index")
 
   
-  poolconn.query('SELECT id,first_name, last_name FROM employees',(error,results)=>{//default.js page content data from db
+  pool.query('SELECT id,first_name, last_name FROM employees',(error,results)=>{//default.js page content data from db
       if(error){
           throw error;
       }else{
@@ -73,7 +73,7 @@ app.get('/emails',(req,res)=>{   //router.get('/',index);
   res.set('Access-Control-Allow-Origin', '*');//app.set('port',port)
   //
   
-  poolconn.query('SELECT id,email FROM employees',(error,results)=>{//callback from DB request
+  pool.query('SELECT id,email FROM employees',(error,results)=>{//callback from DB request
       if(error){
           throw error;
       }
